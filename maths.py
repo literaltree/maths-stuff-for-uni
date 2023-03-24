@@ -44,27 +44,11 @@ def lcm(num1, num2):
                 return numLCM
     return -1
 
-def prime_factorisation(num):
-    factors = []
-    for i in range(num):
-        for i in range(2, int(num//2)):
-            if num % i == 0:
-                num /= i
-                factors.append(i)
-                break
-    factors.append(int(num))
-    return factors
-
 
 if __name__ == '__main__':
-    function = input('Function: ').lower()
-    if function == 'gcd' or function == 'lcm':
-        num1 = float(input("Number 1: "))
-        num2 = float(input("Number 2: "))
-        numGCD = gcd(num1, num2)
-        numLCM = lcm(num1, num2)
-        print(f'GCD = {numGCD}')
-        print(f'LCM = {numLCM}')
-    elif function == 'pf':
-        factors = prime_factorisation(int(input('Number: ')))
-        print(factors)
+    num1 = float(input("Number 1: "))
+    num2 = float(input("Number 2: "))
+    numGCD = gcd(num1, num2)
+    numLCM = lcm(num1, num2)
+    print(f'GCD = {numGCD}')
+    print(f'LCM = {numLCM}')
